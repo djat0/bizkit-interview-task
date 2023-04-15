@@ -20,8 +20,5 @@ def match(match_id):
 
 
 def is_match(fave_numbers_1, fave_numbers_2):
-    for number in fave_numbers_2:
-        if number not in fave_numbers_1:
-            return False
-
-    return True
+    #representing each list as set and using issubset() function to check if fave_numbers_2 is subset of fave_numbers_1
+    return (set(fave_numbers_2).issubset(set(fave_numbers_1)))
